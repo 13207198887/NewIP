@@ -12,5 +12,4 @@ text2picture.py  将文本装换为字云
 
 
 
-## 感谢项目
-[img2html](https://github.com/xlzd/img2html)
+
