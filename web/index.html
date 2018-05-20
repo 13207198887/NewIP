@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <title>转换器</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+        <link rel="stylesheet" src="style.css">
+        <script src="https://cdn.bootcss.com/axios/0.16.0/axios.min.js"></script>
+    </head>
+    <body>
+        <div class="container" id="app">
+            <h3 class="text-center">google 翻译</h3>
+            <!-- <textarea name="" id="input" cols="10" rows="10">
+                {{ input }}
+            </textarea>
+            <textarea id="result" cols="10" rows="10">
+                {{ result }}
+            </textarea>
+            <button> 转换 </button> -->
+            <!-- <h1>  RESTful  Client：Axios </h1> -->
+            <div  style="">
+                    <div class="input-box"  style="float:left; margin-right:10px;width:40%">
+                            <h4>输入：</h4>
+                            <!-- ID：<input type="text" v-model="id"><br />
+                            参数：<br /> -->
+                            <textarea cols="40" rows="10" v-model="input"></textarea><br />
+                            <!-- <input type="button" @click="getresult()" value="转换">
+                            <input type="button" @click="googleapi()" value="googleapi"> -->
+                            <!-- <input type="button" @click="client.list()" value="List">
+                            <input type="button" @click="client.get(id)" value="Get">
+                            <input type="button" @click="client.add(JSON.parse(input))" value="Add">
+                            <input type="button" @click="client.modify(id, JSON.parse(input))" value="Moidfy">
+                            <input type="button" @click="client['delete'](id)" value="Delete"><br /> -->
+                          </div>
+                          <div class="output-box" style="float:left; margin-right:10px;width:40%">
+                             <h4>去掉换行符： </h4>
+                            <!-- 状态：<input type="text" v-model="status"><br /> 
+                            输出：<br /> -->
+                            <textarea cols="40" rows="10" v-model="output"></textarea>
+                          </div>
+            </div>
+            <div class="translate-box" style="clear:both;width:60%">
+                <h4>翻译结果： </h4>
+               <!-- 状态：<input type="text" v-model="status"><br /> 
+               输出：<br /> -->
+               <textarea cols="40" rows="10" v-model="result"></textarea>
+             </div>
+            <!-- <div class="card-divider">
+                {{ result.title }}
+            </div>
+            <div class="card-section">
+                <p>{{ result.abstract }}.</p>
+            </div> -->
+        </div>
+
+        <script src="https://unpkg.com/vue"></script>
+        <script src="app.js"></script>
+
+    </body>
+</html>
