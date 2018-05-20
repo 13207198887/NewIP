@@ -5,10 +5,28 @@
         <title>转换器</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
         <link rel="stylesheet" src="style.css">
+        <style>
+         .text{
+            font-family : 微软雅黑,宋体;
+            font-size:20px;
+            background: #C7EDCC;
+        }
+
+        .container{
+            width: 80%;
+    height: 100%;
+    margin: auto;
+            position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+        }
+        </style>
         <script src="https://cdn.bootcss.com/axios/0.16.0/axios.min.js"></script>
     </head>
-    <body>
-        <div class="container" id="app">
+    <body style="background: #C7EDCC;margin: auto;position: absolute;width:100%">
+        <div class="container" id="app" >
             <h3 class="text-center">google 翻译</h3>
             <!-- <textarea name="" id="input" cols="10" rows="10">
                 {{ input }}
@@ -19,11 +37,11 @@
             <button> 转换 </button> -->
             <!-- <h1>  RESTful  Client：Axios </h1> -->
             <div  style="">
-                    <div class="input-box"  style="float:left; margin-right:10px;width:40%">
+                    <div class="input-box"  style="float:left; margin-right:10px;width:45%">
                             <h4>输入：</h4>
                             <!-- ID：<input type="text" v-model="id"><br />
                             参数：<br /> -->
-                            <textarea cols="40" rows="10" v-model="input"></textarea><br />
+                            <textarea cols="40" rows="10" v-model="input" class="text"></textarea><br />
                             <!-- <input type="button" @click="getresult()" value="转换">
                             <input type="button" @click="googleapi()" value="googleapi"> -->
                             <!-- <input type="button" @click="client.list()" value="List">
@@ -32,18 +50,18 @@
                             <input type="button" @click="client.modify(id, JSON.parse(input))" value="Moidfy">
                             <input type="button" @click="client['delete'](id)" value="Delete"><br /> -->
                           </div>
-                          <div class="output-box" style="float:left; margin-right:10px;width:40%">
+                          <div class="output-box" style="float:left; margin-right:10px;width:50%">
                              <h4>去掉换行符： </h4>
                             <!-- 状态：<input type="text" v-model="status"><br /> 
                             输出：<br /> -->
-                            <textarea cols="40" rows="10" v-model="output"></textarea>
+                            <textarea cols="40" rows="10" v-model="output" class="text"></textarea>
                           </div>
             </div>
             <div class="translate-box" style="clear:both;width:60%">
                 <h4>翻译结果： </h4>
                <!-- 状态：<input type="text" v-model="status"><br /> 
                输出：<br /> -->
-               <textarea cols="40" rows="10" v-model="result"></textarea>
+               <textarea cols="40" rows="10" v-model="result"  class="text"></textarea>
              </div>
             <!-- <div class="card-divider">
                 {{ result.title }}

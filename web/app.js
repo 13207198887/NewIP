@@ -32,7 +32,7 @@ const vm = new Vue({
     el: '#app',
     data: {
         output: '',
-        input:'',
+        input:'hello world',
         result:'',
     },
     mounted() {
@@ -45,26 +45,33 @@ const vm = new Vue({
         //     this.results = response.data.tasks
         //     console.log(this.results)
         // })
+        this.getresult()
     },
     methods:{
         getresult:function(){
-            axios.get("http://localhost:5000/api/v1.0/getstring/"+this.input)
-            .then(response => {
-                this.output = response.data.tasks
-                console.log(this.output)
-                //console.log(this.results)
-            })
-       // console.log(this.input)
+            this.output = ''
+            for(var i=0;i<this.input.length;i++)
+            {
+                if( "!" < this.input[i] && this.input[i] < "~" && this.input[i] != '\n'){
+                    this.output += this.input[i];
+                }else{
+                    this.output += " ";
+                }
+                
+                //console.log(this.input[i])
+            }
+        
+           
     },
     googleapi:function(){
         
-        var sourceLang = "en";
-        var targetLang = "zh-CN";
-        const data = {
-            'sl': sourceLang,
-            'tl': targetLang,
-            'q': "hello world!",
-        }
+        // var sourceLang = "en";
+        // var targetLang = "zh-CN";
+        // const data = {
+        //     'sl': sourceLang,
+        //     'tl': targetLang,
+        //     'q': "hello world!",
+        // }
         
         var mytk = tk(this.output,TKK);
         // const url = "http://localhost:7890/translate_a/single"

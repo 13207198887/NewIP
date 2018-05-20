@@ -13,3 +13,12 @@
     color: darkgreen;
     text-decoration:line-through
   }
+
+  .chinese{ font-family:"SimSun";
+    font-size:20px;
+  } 
+  
+  .text{
+    
+    background: #C7EDCC
+  }
